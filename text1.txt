@@ -1,0 +1,142 @@
+- Creating your repository
+- Git pull
+- Push me, pull you
+- Starting at the command line
+- Commits – best practices
+* deference between git and git hub
+- create new git repository
+- stage and commit changes 
+- checkout different commits
+- crate new branches 
+- merge branches 
+- create account at git hub
+- connect local and remote repositories 
+- read contents of the git objects 
+git distributed version control system
+github repository hosting service (hold the git file)
+-> git install
+```
+git --version
+```
+- create new git repository with git bash
+```
+git init
+ls 
+ls -a
+ls -a .git
+cat .git/config
+git branch -m master or main
+```
+- git objects type 
+	- blob
+	- tree
+	- commit
+	- annotated tag
+```
+echo first >1.txt (create new file)
+cat 1.txt (read the file)
+ls .git/objects (check file)
+```
+here first txt content in this file 
+
+
+```
+git add
+git commit
+git checkout
+--------------
+git status
+git config
+git config --global user.name 'saharun46'
+git config --global user.email 'nahrun46@gmail.com'
+git config --list
+git add .
+git commit -m 'first commit'
+git status
+git log
+echo second > 2.txt
+git add .
+git commit -m 'second file add'
+git status
+git log
+-------------
+git checkout 7a6500 (6digit commit number)
+git status
+git log
+ls
+git checkout main
+-----------------
+git log
+git log -n 5(first 5  commit)
+git log --since=2019-01-01
+git log --until=2020-01-01
+```
+- file tracking statuses:
+	- untracked
+	- unmodified
+	- modified
+	- staged
+```
+echo 'some other content' >>2.txt
+cat 2.txt
+git status
+git commit -a -m 'second file add more content'
+```
+Branches:
+
+
+```
+git branch feature1
+git branch
+git log
+git checkout feature1
+git log
+echo third > 3.txt
+ls
+git status
+git add .
+git commit -m 'third file add'
+git status
+git log
+git checkout main
+git status
+git log
+
+```
+Merge:
+```
+git merge feature1
+insert I letter to enter insert mode
+press esc to exit from the insert mode
+type :wq and press enter to save changes and quit
+git log --graph
+git branch -d feature1
+git log -graph
+
+```
+
+---
+Configuration:
+System
+	git config --system
+User
+	fir config --global
+Project
+	git config
+```
+git config -- global user.name 'abdullah007'
+git config -- global user.email 'aharun46@gmail.com'
+git config --list
+
+```
+Git origin fatal error:
+credential manager in windows and delete file
+```
+git remote --verbose
+git remote set-url origin https://github.com/saharun46/blog.git
+
+git push --set-upstream origin main
+gir remote -v
+
+git log --grep='commit test type'
+```
